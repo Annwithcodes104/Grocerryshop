@@ -1,0 +1,49 @@
+
+
+{% extends 'navigation.html' %}
+{% load static %}
+{% block body %}
+<h1>Create An Account</h1>
+<div class="container">
+    <div class="p-4 m-4">
+        <div class="col-lg-5 mx-auto border-rounded pt-4">
+            <form method="post">
+                {% csrf_token %}
+                <h3 class="alert alert-light border-rounded">Create An Account</h3>
+                <!-- name -->
+                <div class="form-group">
+                    <label for="">Name</label>
+                    <input type="name" name="name" id="" class="form-control form-control-sm" placeholder="you name">
+                    <br><br>
+                </div>
+  
+                <!-- email -->
+                 <div class="form-group">
+                  <label for="">Email</label>
+                  <input type="email" name="email" id="" class="form-control form-control-sm" placeholder="example@gmail.com">
+                  <br><br>
+                </div> 
+                <!-- pasword -->
+                 <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" name="password" id="" class="form-control form-control-sm" placeholder="enter password">
+                    <br><br>
+                </div>
+
+                <div class="form-group">
+                    <label for="">confirm Password</label>
+                    <input type="confirm" name="confirm" id="" class="form-control form-control-sm" placeholder="confirm your password">
+                    <br><br>
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-sm btn-info" type="submit">
+
+                </div>
+
+
+            </form>
+        </div>
+
+    </div>
+</div> 
+{% endblock %}
